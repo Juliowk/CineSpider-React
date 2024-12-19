@@ -3,9 +3,13 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useEffect, useState } from "react";
-import { Button, Col, Collapse, Row } from "react-bootstrap";
+import { Col, Collapse, Row } from "react-bootstrap";
+import { GiSpiderWeb } from "react-icons/gi";
+import { RiGithubFill } from "react-icons/ri";
+import { BsLinkedin } from "react-icons/bs";
+import { MdOutlineMenuOpen } from "react-icons/md";
 
-const HeaderComponent = () => {
+const Header = () => {
   const [open, setOpen] = useState(true);
   const [collapseOpen, setCollapseOpen] = useState(false);
 
@@ -31,24 +35,28 @@ const HeaderComponent = () => {
 
   return (
     <header className="bg-dark">
-      <Navbar bg="dark" data-bs-theme="dark" className="h-20">
+      <Navbar bg="dark" data-bs-theme="dark" className="h-20 p-3">
         <Container>
           <Row className="w-100 align-items-center">
             <Col xs={4} className="d-flex align-items-center">
-              <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+              <Navbar.Brand href="#home" className="d-flex align-items-center">
+                <h2 className="mb-0">
+                  <GiSpiderWeb className="me-2" /> CineSpider
+                </h2>
+              </Navbar.Brand>
             </Col>
 
             {/* Exibe o botão de colapsar em telas pequenas */}
             {!open && (
               <Col xs={4} className="d-flex justify-content-end ms-auto">
-                <Button
+                <a
                   onClick={() => setCollapseOpen(!collapseOpen)}
                   aria-controls="collapsible-navbar"
                   aria-expanded={collapseOpen}
-                  variant="secondary"
+                  className="text-white"
                 >
-                  Menu
-                </Button>
+                  <MdOutlineMenuOpen size={30} />
+                </a>
               </Col>
             )}
 
@@ -80,9 +88,18 @@ const HeaderComponent = () => {
             {open && (
               <Col xs={4} className="d-flex justify-content-end">
                 <Nav>
-                  <Nav.Link href="#linkedin">LinkedIn</Nav.Link>
-                  <Nav.Link href="#github" className="ms-3">
-                    GitHub
+                  <Nav.Link
+                    target="_blank"
+                    href="https://www.linkedin.com/in/j%C3%BAlio-elias-desenvolvedor/"
+                  >
+                    <BsLinkedin size={30} />
+                  </Nav.Link>
+                  <Nav.Link
+                    target="_blank"
+                    href="https://github.com/Juliowk"
+                    className="ms-3"
+                  >
+                    <RiGithubFill size={30} />
                   </Nav.Link>
                 </Nav>
               </Col>
@@ -120,8 +137,15 @@ const HeaderComponent = () => {
                         Favoritos
                       </NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="#linkedin">LinkedIn</Nav.Link>
-                    <Nav.Link href="#github">GitHub</Nav.Link>
+                    <Nav.Link
+                      target="_blank"
+                      href="https://www.linkedin.com/in/j%C3%BAlio-elias-desenvolvedor/"
+                    >
+                      <BsLinkedin size={23} />
+                    </Nav.Link>
+                    <Nav.Link target="_blank" href="https://github.com/Juliowk">
+                      <RiGithubFill size={23} />
+                    </Nav.Link>
                   </Nav>
                 </Col>
               </Row>
@@ -133,4 +157,4 @@ const HeaderComponent = () => {
   );
 };
 
-export default HeaderComponent;
+export default Header;
