@@ -41,7 +41,7 @@ const SectionBanner = () => {
               >
                 <h1>
                   Procurando um Filme?
-                  <br /> Veja o nosso Cabeça de Teia Favorito!
+                  <br /> Venha ver nosso Cabeça de Teia Favorito!
                 </h1>
                 <p className="fs-6">
                   Se você está em busca de um filme que te leve a uma teia de

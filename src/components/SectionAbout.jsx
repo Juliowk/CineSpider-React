@@ -29,7 +29,7 @@ const SectionAbout = () => {
         } ${open ? "p-5" : "p-2"}`}
       >
         <Card.Header>
-          <h2>Querendo saber mais sobre?</h2>
+          <h2>Querendo saber mais?</h2>
         </Card.Header>
         <Card.Body>
           Esse site é perfeito para os fãs do Cabeça de Teia que querem embarcar
