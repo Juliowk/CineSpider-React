@@ -1,5 +1,5 @@
 import Header from "./components/header";
-import SectionBanner from "./components/Section";
+import SectionBanner from "./components/SectionBanner";
  
 function App() {
   return (

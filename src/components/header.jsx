@@ -34,13 +34,13 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-dark">
-      <Navbar bg="dark" data-bs-theme="dark" className="h-20 p-3">
+    <header>
+      <Navbar style={{ backgroundColor: "black" }} data-bs-theme="dark">
         <Container>
           <Row className="w-100 align-items-center">
             <Col xs={4} className="d-flex align-items-center">
               <Navbar.Brand href="#home" className="d-flex align-items-center">
-                <h2 className="mb-0">
+                <h2 className="mb-0 text-white">
                   <GiSpiderWeb className="me-2" /> CineSpider
                 </h2>
               </Navbar.Brand>
@@ -65,7 +65,7 @@ const Header = () => {
               <Col xs={4} className="d-flex justify-content-center">
                 <Nav>
                   <Nav.Link href="#about">Sobre</Nav.Link>
-                  <NavDropdown title="Filtros" className="ms-3">
+                  <NavDropdown title="Filtros" className="ms-3 ">
                     <NavDropdown.Item href="#assessment">
                       Avaliação
                     </NavDropdown.Item>
