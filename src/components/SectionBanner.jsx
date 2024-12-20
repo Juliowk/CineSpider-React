@@ -80,7 +80,7 @@ const SectionBanner = () => {
               >
                 <h6>
                   Procurando um Filme?
-                  <br /> Veja o nosso Cabeça de Teia Favorito!
+                  <br /> Venha ver nosso Cabeça de Teia Favorito!
                 </h6>
               </div>
             </div>
