@@ -1,26 +1,19 @@
 import { Carousel, Container } from "react-bootstrap";
+import { useEffect, useState } from "react";
 import CarouselImage from "./carouselComponents/CarouselImage";
 
 // Images do carousel
 import banner from "../images/carouselImages/OEspetacularHomemAranhaBanner.jpg";
-import { useEffect, useState } from "react";
 
 const SectionBanner = () => {
   const [open, setOpen] = useState(true);
 
   const handleResize = () => {
-    if (window.innerWidth <= 770) {
-      setOpen(false);
-    } else {
-      setOpen(true);
-    }
+    setOpen(window.innerWidth > 770);
   };
 
   useEffect(() => {
     handleResize();
-  }, []);
-
-  useEffect(() => {
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -34,7 +27,7 @@ const SectionBanner = () => {
         <Carousel className="text-white" controls={false}>
           <Carousel.Item>
             <div style={{ position: "relative" }}>
-              <CarouselImage src={banner} alt="First slide" />
+              <CarouselImage src={banner} alt="Banner Spider-Man" />
               <div
                 className="d-flex flex-column justify-content-center align-items-start h-100 w-50
             text-start px-3"
@@ -89,7 +82,6 @@ const SectionBanner = () => {
                   Procurando um Filme?
                   <br /> Veja o nosso Cabeça de Teia Favorito!
                 </h6>
-                
               </div>
             </div>
             <Carousel.Item></Carousel.Item>

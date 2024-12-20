@@ -14,7 +14,7 @@ const Header = () => {
   const [collapseOpen, setCollapseOpen] = useState(false);
 
   const handleResize = () => {
-    if (window.innerWidth <= 510) {
+    if (window.innerWidth <= 770) {
       setOpen(false);
     } else {
       setOpen(true);
@@ -41,7 +41,7 @@ const Header = () => {
             <Col xs={4} className="d-flex align-items-center">
               <Navbar.Brand href="#home" className="d-flex align-items-center">
                 <h2 className="mb-0 text-white">
-                  <GiSpiderWeb className="me-2" /> CineSpider
+                  CineSpider <GiSpiderWeb className="ms-2" />
                 </h2>
               </Navbar.Brand>
             </Col>

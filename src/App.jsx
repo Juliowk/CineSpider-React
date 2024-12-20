@@ -1,11 +1,13 @@
 import Header from "./components/header";
+import SectionAbout from "./components/SectionAbout";
 import SectionBanner from "./components/SectionBanner";
- 
+
 function App() {
   return (
     <div>
       <Header />
-      <SectionBanner/>
+      <SectionBanner />
+      <SectionAbout />
     </div>
   );
 }

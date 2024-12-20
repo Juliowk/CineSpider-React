@@ -9,7 +9,7 @@ const CarouselImage = forwardRef(({ src, alt, height, objectFit }, ref) => {
       ref={ref}
       src={src}
       alt={alt}
-      style={{ objectFit: objectFit && "scale-down", height: height ? height : "550px", }}
+      style={{ objectFit: objectFit && "scale-down", height: height ? height : "620px", }}
       className="d-block w-100"
     />
   );
